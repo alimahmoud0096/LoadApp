@@ -56,6 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/file_name"
+       android:layout_marginEnd="@dimen/dp_20"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/fileName"

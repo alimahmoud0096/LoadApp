@@ -15,6 +15,7 @@ import com.udacity.R
 
 const val FILE_NAME = "fileName"
 const val STATUS = "status"
+const val NOTIFICATION_ID = "NOTIFICATION_ID"
 
 
 fun NotificationManager.sendNotification(applicationContext: Context,downloadID:Int,fileName:String,status: String) {
@@ -22,6 +23,7 @@ fun NotificationManager.sendNotification(applicationContext: Context,downloadID:
     val contentIntent = Intent(applicationContext, DetailActivity::class.java)
     contentIntent.putExtra(FILE_NAME,fileName)
     contentIntent.putExtra(STATUS,status)
+    contentIntent.putExtra(NOTIFICATION_ID,downloadID)
     val contentPendingIntent = PendingIntent.getActivity(
         applicationContext,
         downloadID,

@@ -6,6 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
+        motion:autoTransition="animateToEnd"
         motion:duration="1000">
        <KeyFrameSet>
        </KeyFrameSet>
@@ -22,7 +23,6 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            motion:layout_constraintStart_toEndOf="parent"
             android:id="@+id/status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -38,7 +38,9 @@
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toEndOf="@+id/textView"
             motion:layout_constraintTop_toTopOf="@+id/textView"
-            android:id="@+id/fileName" />
+            android:id="@+id/fileName"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" />
     </ConstraintSet>
 
 </MotionScene>
